@@ -1,0 +1,48 @@
+@UserManagementApi_HostAddress = http://localhost:5186
+
+### Auth — login (cookie access_token)
+POST {{UserManagementApi_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "ivan.petrov@example.com",
+  "password": "Password123!"
+}
+
+### Auth — me
+GET {{UserManagementApi_HostAddress}}/api/auth/me
+
+### Auth — register
+POST {{UserManagementApi_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Анна",
+  "lastName": "Смирнова",
+  "email": "anna@example.com",
+  "password": "Password123!",
+  "phone": "+79007654321"
+}
+
+### Auth — logout
+POST {{UserManagementApi_HostAddress}}/api/auth/logout
+
+### Users
+GET {{UserManagementApi_HostAddress}}/api/users
+
+POST {{UserManagementApi_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+  "firstName": "Пётр",
+  "lastName": "Иванов",
+  "email": "petr@example.com",
+  "password": "Password123!",
+  "phone": "+79001112233"
+}
+
+### Products
+GET {{UserManagementApi_HostAddress}}/api/products
+
+### Orders
+GET {{UserManagementApi_HostAddress}}/api/orders

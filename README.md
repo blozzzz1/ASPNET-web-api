@@ -33,7 +33,7 @@ dotnet run
 
 ## Auth
 
-JWT сохраняется в HttpOnly cookie `access_token` (не в JSON-теле ответа).
+JWT сохраняется в HttpOnly cookie `access_token`.
 
 | Метод | URL | Доступ |
 |-------|-----|--------|
@@ -91,8 +91,3 @@ UserManagementApi.Tests/
 dotnet test
 ```
 
-## Swagger и cookie
-
-1. `POST /api/auth/login`
-2. В Response headers появится `Set-Cookie: access_token=...`
-3. Дальше вызывайте защищённые методы — браузер отправит cookie сам
